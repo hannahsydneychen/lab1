@@ -1,3 +1,4 @@
+print("farewell")
 print("hello")
 print("hello world")
 print("bye world")
