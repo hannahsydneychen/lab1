@@ -1,3 +1,4 @@
+#calculator
 '''
 make a command line calculator
 
@@ -26,8 +27,20 @@ def calculate(s):
     >>> calculate(\'print("bad guy coming to hack")\')
     '''
     # TODO = fill in this function
-    pass
+    try:
+      x = eval(s)
+    except:
+      return None
+    else:
+      if "/" in s:
+          return float(x)
+      return x
+
+
+
+
 
 if __name__ == '__main__':
+
     import doctest
     doctest.testmod()

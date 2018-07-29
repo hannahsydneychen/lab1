@@ -1,3 +1,5 @@
+
+print("farewell")
 print("new line")
 print("hello")
 print("hello world")
