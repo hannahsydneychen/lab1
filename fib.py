@@ -1,12 +1,3 @@
-'''
-task = produce list of fibonacci numbers of length n
-
-DIFFICULTY = EASY
-TOPICS = lists, variables, loops
-
-1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
-'''
-
 def produceFibsList(n):
     '''
     >>> produceFibsList(0)
@@ -20,9 +11,25 @@ def produceFibsList(n):
     >>> produceFibsList(5)
     [1, 1, 2, 3, 5]
     '''
+    fibs = [1,1]
     # TODO = fill in the code here, and return the correct result using the return keyword
-    pass
-
+    if n == 0:
+        return []
+    if n == 1:
+        return [1]
+    if n == 2:
+        return [1,1]
+    for i in range(n-2):
+       fibs.append(fibs[-1]+ fibs[-2])
+    return (fibs)
+'''
+    if n == 2:
+        return [1,1]
+    if n == 3:
+        return [1,1,2]
+    if n == 5:
+        return [1,1,2,3,5]
+'''
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
